@@ -33,8 +33,8 @@ export default function Home() {
     <>
       <Container>
         <div className="flex flex-col justify-center items-center h-96">
-          <h1 className="text-4xl font-bold text-white">
-            Welcome to Digital Library
+          <h1 className="text-4xl font-extralight text-white">
+            Welcome to Hogwarts Library
           </h1>
           <div className="flex justify-center items-center mt-4">
             <input

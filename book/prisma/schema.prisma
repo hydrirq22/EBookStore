@@ -10,7 +10,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgres://digital_library_xwqe_user:K9OStIrQ0opELHjcngLO1htXEIcnOcms@dpg-coj4ek0cmk4c73aejt10-a.frankfurt-postgres.render.com/digital_library_xwqe"
+  url      = "postgres://digital_library_v7ce_user:a15BjIeBRPagLnSxwU7WieSJSGNl2Xdp@dpg-conm4ma1hbls73flh8ag-a.frankfurt-postgres.render.com/digital_library_v7ce"
 }
 model Books {
   id          Int      @id @default(autoincrement())

@@ -2,9 +2,9 @@ import React from 'react';
 
 const BookCard = ({ book }) => {
     return (
-        <div className="book-card bg-white shadow-md rounded-lg p-6 max-w-sm mx-auto">
+        <div className="book-card bg-current shadow-md rounded-lg p-6 max-w-sm mx-auto">
             <img className='w-full h-48 object-fit rounded-md' src={book.image} alt={book.title} />
-            <h2 className='text-xl font-bold mt-4 text-black'>{book.title}</h2>
+            <h2  className='text-xl font-extralight mt-4 text-black'>{book.title}</h2>
             <p className='text-gray-700 mt-2'>Author: {book.author}</p>
             <p className='text-gray-700'>Pages: {book.pages}</p>
             <p className='text-gray-700'>Genre: {book.genre}</p>

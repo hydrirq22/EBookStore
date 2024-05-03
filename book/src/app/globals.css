@@ -12,23 +12,25 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --foreground-rgb: 0,0,0;
+    --background-image: url("https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    --background-end-rgb: 225,225,225;
   }
 }
 
-body {
-  background: linear-gradient(
+ body {
+  /* background: linear-gradient(
       to bottom,
       transparent,
       rgb(var(--background-end-rgb))
     )
-    rgb(var(--background-start-rgb));
-}
+    rgb(var(--background-start-rgb)); */
+    background-image: url("https://images.pexels.com/photos/1485894/pexels-photo-1485894.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2") !important ;
+} 
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+

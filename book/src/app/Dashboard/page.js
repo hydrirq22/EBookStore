@@ -152,7 +152,7 @@ const Dashboard = () => {
               name="title"
               value={formData.title}
               onChange={handleChange}
-              className="text-gray-700 border rounded-md px-3 py-2 w-full"
+              className="text-gray-700 border rounded-md px-3 py-2 w-full text-black"
             />
           </div>
           <div className="mb-4">
