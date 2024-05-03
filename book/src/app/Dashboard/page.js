@@ -3,6 +3,15 @@ import { useState, useEffect } from "react";
 import BookTable from "../../Components/BookTable";
 import { Modal } from "../../Components/Modal";
 
+// Define the Genre enum
+const Genre = {
+  Fantasy: "Fantasy",
+  Novels: "Novels",
+  Science: "Science",
+  Drama: "Drama",
+  Literature: "Literature",
+};
+
 const Dashboard = () => {
   const [books, setBooks] = useState([]);
   const [showModal, setShowModal] = useState(false);
@@ -10,7 +19,7 @@ const Dashboard = () => {
     title: "",
     author: "",
     pages: 0,
-    genre: "",
+    genre: Genre.Fantasy, 
     description: "",
     image: "",
     link: "",
@@ -57,8 +66,8 @@ const Dashboard = () => {
         },
         body: JSON.stringify(formData),
       });
-      fetchData(); // Fetch updated data
-      setShowModal(false); // Close modal
+      fetchData(); 
+      setShowModal(false); 
     } catch (error) {
       console.error("Error adding data:", error);
     }
@@ -70,7 +79,7 @@ const Dashboard = () => {
       title: "",
       author: "",
       pages: 0,
-      genre: "",
+      genre: Genre.Fantasy, 
       description: "",
       image: "",
       link: "",
@@ -194,15 +203,21 @@ const Dashboard = () => {
             >
               Genre:
             </label>
-            <input
-              type="text"
+            <select
               id="genre"
               name="genre"
               value={formData.genre}
               onChange={handleChange}
-              className="text-gray-700 border rounded-md px-3 py-2 w-full"
-            />
+              className="text-black border rounded-md px-3 py-2 w-full"
+            >
+              {Object.values(Genre).map((genre) => (
+                <option className='text-black' key={genre} value={genre}>
+                  {genre}
+                </option>
+              ))}
+            </select>
           </div>
+
           <div className="mb-4">
             <label
               htmlFor="description"
